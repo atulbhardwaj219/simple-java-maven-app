@@ -25,8 +25,8 @@ pipeline {
             steps {
                 sh 'pwd'
                 sh 'ls -l'
-                sh 'chmod +x ./scripts/deliver.sh'
-                sh './scripts/deliver.sh'
+                sh 'chmod +x scripts/deliver.sh'
+                sh 'scripts/deliver.sh'
             }
         }
     }
