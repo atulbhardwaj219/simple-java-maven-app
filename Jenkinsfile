@@ -29,12 +29,15 @@ pipeline {
                 sh './scripts/deliver.sh'
             }
         }
-       stage('SonarQube Analysis') {
-           steps {
-           withSonarQubeEnv() {   
-         sh "mvn clean verify sonar:sonar -Dsonar.projectKey=test"
-       }
-           }
-  }
+        stage('build && SonarQube analysis') {
+            steps {
+                withSonarQubeEnv('My SonarQube Server') {
+                    // Optionally use a Maven environment you've configured already
+                    withMaven(maven:'Maven 3.5') {
+                        sh 'mvn clean package sonar:sonar'
+                    }
+                }
+            }
+        }
     }
 }
