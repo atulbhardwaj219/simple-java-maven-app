@@ -24,9 +24,9 @@ pipeline {
         stage('Deliver') {
             steps {
                 sh 'pwd'
-                sh 'ls -l'
-                sh 'chmod +x scripts/deliver.sh'
-                sh 'scripts/deliver.sh'
+                sh 'ls -l ./scripts/'
+                sh 'chmod +x ./scripts/deliver.sh'
+                sh './scripts/deliver.sh'
             }
         }
     }
