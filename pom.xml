@@ -17,7 +17,7 @@
     <dependency>
     <groupId>org.codehaus.mojo</groupId>
     <artifactId>sonar-maven-plugin</artifactId>
-    <version>3.0</version>
+    <version>3.0.2</version>
     <type>pom</type>
 </dependency>
   </dependencies>
@@ -73,7 +73,7 @@
       <plugin>
         <groupId>org.codehaus.sonar</groupId>
         <artifactId>sonar-maven-plugin</artifactId>
-        <version>3.0</version>
+        <version>3.0.2</version>
       </plugin>
     </plugins>
   </build>
